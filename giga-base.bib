@@ -1,0 +1,895 @@
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+
+%Entries
+@article{SResolution,
+author = {Yue, Linwei and Shen, Huanfeng and Li, Jie and Yuan, Qiangqiang and Zhang, Hongyan and Zhang, Liangpei},
+year = {2016},
+month = {05},
+pages = {},
+title = {Image super-resolution: The techniques, applications, and future},
+volume = {128},
+journal = {Signal Processing},
+doi = {10.1016/j.sigpro.2016.05.002}
+}
+
+@article{Anwar2020ADJ,
+  title={A Deep Journey into Super-resolution: A survey},
+  author={Saeed Anwar and Salman Khan and Nick Barnes},
+  journal={ACM Computing Surveys (CSUR)},
+  year={2020},
+  volume={53},
+  pages={1 - 34},
+  eprint={1904.07523},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
+
+@article{hao2021recent,
+  title={Recent progress of integrated circuits and optoelectronic chips},
+  author={Hao, Yue and Xiang, Shuiying and Han, Genquan and Zhang, Jincheng and Ma, Xiaohua and Zhu, Zhangming and Guo, Xingxing and Zhang, Yahui and Han, Yanan and Song, Ziwei and others},
+  journal={Science China Information Sciences},
+  volume={64},
+  number={10},
+  pages={1--33},
+  year={2021},
+  publisher={Springer}
+}
+
+@BOOK{Cagnet1962,
+	AUTHOR = {Cagnet, Michel},
+	YEAR = {1962},
+	TITLE = {Atlas optischer Erscheinungen - Atlas of optical phenomena},
+	EDITION = {},
+	ISBN = {},
+	PUBLISHER = {Springer},
+	ADDRESS = {Berlin, Heidelberg},
+}
+
+
+@Article{s19245459,
+AUTHOR = {Deng, Wei and Fossum, Eric R.},
+TITLE = {1/f Noise Modelling and Characterization for CMOS Quanta Image Sensors},
+JOURNAL = {Sensors},
+VOLUME = {19},
+YEAR = {2019},
+NUMBER = {24},
+ARTICLE-NUMBER = {5459},
+URL = {https://www.mdpi.com/1424-8220/19/24/5459},
+ISSN = {1424-8220},
+ABSTRACT = {This work fits the measured in-pixel source-follower noise in a CMOS Quanta Image Sensor (QIS) prototype chip using physics-based 1/f noise models, rather than the widely-used fitting model for analog designers. This paper discusses the different origins of 1/f noise in QIS devices and includes correlated double sampling (CDS). The modelling results based on the Hooge mobility fluctuation, which uses one adjustable parameter, match the experimental measurements, including the variation in noise from room temperature to –70 °C. This work provides useful information for the implementation of QIS in scientific applications and suggests that even lower read noise is attainable by further cooling and may be applicable to other CMOS analog circuits and CMOS image sensors.},
+DOI = {10.3390/s19245459}
+}
+
+@ARTICLE{ADCmultibit,
+  author={Yin, Zhaoyang and Wang, Yibing M. and Fossum, Eric R.},
+  journal={IEEE Journal of Solid-State Circuits}, 
+  title={Low Bit-Depth ADCs for Multi-bit Quanta Image Sensors}, 
+  year={2021},
+  volume={56},
+  number={3},
+  pages={950-960},
+  doi={10.1109/JSSC.2020.3045430}}
+
+@ARTICLE{DuttonSPAD,
+  author={Dutton, Neale A. W. and Gyongy, Istvan and Parmesan, Luca and Gnecchi, Salvatore and Calder, Neil and Rae, Bruce R. and Pellegrini, Sara and Grant, Lindsay A. and Henderson, Robert K.},
+  journal={IEEE Transactions on Electron Devices}, 
+  title={A SPAD-Based QVGA Image Sensor for Single-Photon Counting and Quanta Imaging}, 
+  year={2016},
+  volume={63},
+  number={1},
+  pages={189-196},
+  doi={10.1109/TED.2015.2464682}}
+
+
+@article{Cossairt:11,
+author = {Oliver S. Cossairt and Daniel Miau and Shree K. Nayar},
+journal = {J. Opt. Soc. Am. A},
+keywords = {Aberrations (global); Lens system design; Deconvolution; Digital image processing; Computational imaging ; Image processing; Image quality; Imaging systems; Imaging techniques; Object detection; Optical design},
+number = {12},
+pages = {2540--2553},
+publisher = {OSA},
+title = {Scaling law for computational imaging using spherical optics},
+volume = {28},
+month = {Dec},
+year = {2011},
+url = {http://josaa.osa.org/abstract.cfm?URI=josaa-28-12-2540},
+doi = {10.1364/JOSAA.28.002540},
+abstract = {The resolution of a camera system determines the fidelity of visual features in captured images. Higher resolution implies greater fidelity and, thus, greater accuracy when performing automated vision tasks, such as object detection, recognition, and tracking. However, the resolution of any camera is fundamentally limited by geometric aberrations. In the past, it has generally been accepted that the resolution of lenses with geometric aberrations cannot be increased beyond a certain threshold. We derive an analytic scaling law showing that, for lenses with spherical aberrations, resolution can be increased beyond the aberration limit by applying a postcapture deblurring step. We then show that resolution can be further increased when image priors are introduced. Based on our analysis, we advocate for computational camera designs consisting of a spherical lens shared by several small planar sensors. We show example images captured with a proof-of-concept gigapixel camera, demonstrating that high resolution can be achieved with a compact form factor and low complexity. We conclude with an analysis on the trade-off between performance and complexity for computational imaging systems with spherical lenses.},
+}
+
+
+@BOOK{Pedrotti2007,
+	AUTHOR = {Pedrotti, F. AND Pedrotti, L. AND Bausch, W. AND Schmidt, Hartmut},
+	YEAR = {2007},
+	TITLE = {Optik für Ingenieure - Grundlagen},
+	EDITION = {},
+	ISBN = {978-3-540-73471-0},
+	PUBLISHER = {Springer Berlin Heidelberg},
+	ADDRESS = {Wiesbaden},
+}
+s
+@BOOK{Demtroeder2018,
+	AUTHOR = {Demtröder, Wolfgang},
+	YEAR = {2018},
+	TITLE = {Experimentalphysik 2 - Elektrizität und Optik},
+	EDITION = {},
+	ISBN = {978-3-662-55790-7},
+	PUBLISHER = {Springer-Verlag},
+	ADDRESS = {Berlin Heidelberg New York},
+}
+
+@Inbook{Cerofolini2007,
+author="Cerofolini, G. F.
+and Mascolo, D.",
+editor="Korkin, Anatoli
+and Gusev, Evgeni
+and Labanowski, Jan
+and Luryi, Serge",
+title="A Hybrid Route from CMOS to Nano and Molecular Electronics",
+bookTitle="Nanotechnology for Electronic Materials and Devices",
+year="2007",
+publisher="Springer US",
+address="Boston, MA",
+pages="1--65",
+abstract="The exponential increase of complexity of integrated circuits (ICs) has already (2005) allowed the production of approximately 10 {\textmu}mol (≈ 6 {\texttimes} 1018) of transistors; if the current trend toward higher and higher integration continues, an Avogadro number of transistors will be manufactured in the next 20 years--in a way, microelectronics is already ``molecular'' electronics, if not for the transistor size for the number of transistors at least. Hence, the following question: Is there indeed a need of genuine molecular electronics?",
+isbn="978-0-387-49965-9",
+doi="10.1007/978-0-387-49965-9_1",
+url="https://doi.org/10.1007/978-0-387-49965-9_1"
+}
+
+@INPROCEEDINGS{7136690,
+  author={Jusof, Muhammad Jafni and Rahim, Hj. Ruslan Abd.},
+  booktitle={2014 International Conference on Virtual Systems   Multimedia (VSMM)}, 
+  title={Revealing visual details via high dynamic range gigapixels spherical panorama photography: The Tempurung Cave natural heritage site}, 
+  year={2014},
+  volume={},
+  number={},
+  pages={193-200},
+  doi={10.1109/VSMM.2014.7136690}}
+
+
+@article{zheng20140,
+  title={0.5 gigapixel microscopy using a flatbed scanner},
+  author={Zheng, Guoan and Ou, Xiaoze and Yang, Changhuei},
+  journal={Biomedical optics express},
+  volume={5},
+  number={1},
+  pages={1--8},
+  year={2014},
+  publisher={Optical Society of America}
+}
+
+@InProceedings{10.1007/978-3-030-36808-1_37,
+author="Shackleton, Andrew M.
+and Altahhan, Abdulrahman M.",
+editor="Gedeon, Tom
+and Wong, Kok Wai
+and Lee, Minho",
+title="A Comparison Study of Deep Learning Techniques to Increase the Spatial Resolution of Photo-Realistic Images",
+booktitle="Neural Information Processing",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="341--348",
+abstract="In this paper we present a perceptual and error-based comparison study of the efficacy of four different deep-learned super-resolution architectures, ESPCN, SRResNet, ProGanSR and LapSRN, all performed on photo-realistic images by a factor of 4x; adapting some of the current state-of-the-art architectures using Convolutional Neural Networks (CNNs). The resultant application and the implemented CNNs are tested with objective (Peak-Signal-to-Noise ratio and Structural Similarity Index) and perceptual metrics (Mean Opinion Score testing), to judge their relative quality and implementation within the program. The results of these tests demonstrate the effectiveness of super-resolution, showing that most network implementations give an average gain of +1 to +2 dB (in PSNR), and an average gain of +0.05 to +0.1 (in SSIM) over traditional Bicubic scaling. The results of the perception test also show that participants almost always prefer the images scaled using each CNN model compared to traditional Bicubic scaling. These findings also present a look into new diverging paths in super-resolution research; where the focus is now shifting from solely error-reduction, objective-based models to perceptually focused models that satisfy human perception of a high-resolution image.",
+isbn="978-3-030-36808-1"
+}
+
+
+@article{multiscale,
+author = {Brady, D.J. and Gehm, M.E. and Stack, R.A. and Marks, D.L. and Kittle, David and Golish, Dathon and Vera, Esteban and Feller, Steven},
+year = {2012},
+month = {06},
+pages = {386-9},
+title = {Multiscale gigapixel photography},
+volume = {486},
+journal = {Nature},
+doi = {10.1038/nature11150}
+}
+
+@INPROCEEDINGS{8454568,
+  author={Fossum, Eric R.},
+  booktitle={2018 International Conference on Optical MEMS and Nanophotonics (OMN)}, 
+  title={CMOS Image Sensors and the Quanta Image Sensor}, 
+  year={2018},
+  month={July},
+  volume={},
+  number={},
+  pages={1-5},
+  doi={10.1109/OMN.2018.8454568}}
+
+@BOOK{Carroll1980,
+	AUTHOR = {Carroll, Burt Haring AND Higgins, George Clinton AND James, Thomas Howard},
+	YEAR = {1980},
+	TITLE = {Introduction to Photographic Theory - The Silver Halide Process},
+	EDITION = {},
+	ISBN = {978-0-471-02562-7},
+	PUBLISHER = {J. Wiley },
+	ADDRESS = {New York},
+}
+
+@BOOK{Schroeder1981,
+	AUTHOR = {Schröder, Gottfried},
+	YEAR = {1981},
+	TITLE = {Technische Fotografie: Grundlagen und Anwendungen in Technik und Wissenschaft},
+	EDITION = {1},
+	ISBN = {3-8343-3218-6},
+	PUBLISHER = {Vogel},
+	ADDRESS = {Würzburg},
+}
+
+@BOOK{Holst2011,
+	AUTHOR = {Holst, Gerald C. AND Lomheim, Terrence S.},
+	YEAR = {2011},
+	TITLE = {CMOS/CCD Sensors and Camera Systems - },
+	EDITION = {},
+	ISBN = {978---0-8-19-48-6},
+	PUBLISHER = {JCD Publishing},
+	ADDRESS = {Winter Park, FL},
+}
+
+@article{Feng_Yang_2012,
+   title={Bits From Photons: Oversampled Image Acquisition Using Binary Poisson Statistics},
+   volume={21},
+   ISSN={1941-0042},
+   url={http://dx.doi.org/10.1109/TIP.2011.2179306},
+   DOI={10.1109/tip.2011.2179306},
+   number={4},
+   journal={IEEE Transactions on Image Processing},
+   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
+   author={Feng Yang and Lu, Y. M. and Sbaiz, L. and Vetterli, M.},
+   year={2012},
+   month={Apr},
+   pages={1421–1436}
+}
+
+
+@misc{FossumYT18,
+  author        = "Illinois ECE",
+  year          = "2018",
+  title         = "Quanta Image Sensor: megapixel photon counting image sensor - Eric R. Fossum, Dartmouth",
+  howpublished  = "Video",
+  day           = "2",
+  url           = "https://www.youtube.com/watch?v=O3ZSoQgDrOM",
+  month         = apr,
+  lastaccessed  = "June 21, 2021",
+  note          =  "",
+}
+
+@ARTICLE{Masoodian16,
+  author={Masoodian, Saleh and Rao, Arun and Ma, Jiaju and Odame, Kofi and Fossum, Eric R.},
+  journal={IEEE Transactions on Electron Devices}, 
+  title={A 2.5 pJ/b Binary Image Sensor as a Pathfinder for Quanta Image Sensors}, 
+  year={2016},
+  volume={63},
+  number={1},
+  pages={100-105},
+  doi={10.1109/TED.2015.2457418}}
+
+@INPROCEEDINGS{9059308,
+  author={Fossum, Eric R.},
+  booktitle={2020 Pan Pacific Microelectronics Symposium (Pan Pacific)}, 
+  title={The Invention of CMOS Image Sensors: A Camera in Every Pocket}, 
+  year={2020},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.23919/PanPacific48324.2020.9059308}}
+
+
+@article{Ma:17,
+author = {Jiaju Ma and Saleh Masoodian and Dakota A. Starkey and Eric R. Fossum},
+journal = {Optica},
+keywords = {Noise in imaging systems; Photon counting; Low light level; Photodetectors; Solid state detectors ; Imaging systems; Charge coupled devices; Image processing; Image sensors; Optical communications; Single photon avalanche diodes; Temperature sensors},
+number = {12},
+pages = {1474--1481},
+publisher = {OSA},
+title = {Photon-number-resolving megapixel image sensor at room temperature without avalanche gain},
+volume = {4},
+month = {Dec},
+year = {2017},
+url = {http://www.osapublishing.org/optica/abstract.cfm?URI=optica-4-12-1474},
+doi = {10.1364/OPTICA.4.001474},
+abstract = {In several emerging fields of study such as encryption in optical communications, determination of the number of photons in an optical pulse is of great importance. Typically, such photon-number-resolving sensors require operation at very low temperature (e.g., 4\&\#x00A0;K for superconducting-based detectors) and are limited to low pixel count (e.g., hundreds). In this paper, a CMOS-based photon-counting image sensor is presented with photon-number-resolving capability that operates at room temperature with resolution of 1 megapixel. Termed a quanta image sensor, the device is implemented in a commercial stacked (3D) backside-illuminated CMOS image sensor process. Without the use of avalanche multiplication, the 1.1\&\#x00A0;\&\#x03BC;m pixel-pitch device achieves 0.21e\&\#x2212;\&\#x2009;\&\#x2009;rms average read noise with average dark count rate per pixel less than 0.2e\&\#x2212;/s, and 1040\&\#x00A0;fps readout rate. This novel platform technology fits the needs of high-speed, high-resolution, and accurate photon-counting imaging for scientific, space, security, and low-light imaging as well as a broader range of other applications.},
+}
+
+@article{fossum2016quanta,
+  title={The quanta image sensor: Every photon counts},
+  author={Fossum, Eric R and Ma, Jiaju and Masoodian, Saleh and Anzagira, Leo and Zizza, Rachel},
+  journal={Sensors},
+  volume={16},
+  number={8},
+  pages={1260},
+  year={2016},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+@INPROCEEDINGS{MaJotDevices,
+  author={Jiaju Ma and Hondongwa, Donald and Fossum, Eric R.},
+  booktitle={2014 IEEE International Electron Devices Meeting}, 
+  title={Jot devices and the Quanta Image Sensor}, 
+  year={2014},
+  volume={},
+  number={},
+  pages={10.1.1-10.1.4},
+  doi={10.1109/IEDM.2014.7047021}}
+
+
+@Article{s16071005,
+AUTHOR = {Antolovic, I. Michel and Burri, Samuel and Hoebe, Ron A. and Maruyama, Yuki and Bruschini, Claudio and Charbon, Edoardo},
+TITLE = {Photon-Counting Arrays for Time-Resolved Imaging},
+JOURNAL = {Sensors},
+VOLUME = {16},
+YEAR = {2016},
+NUMBER = {7},
+ARTICLE-NUMBER = {1005},
+URL = {https://www.mdpi.com/1424-8220/16/7/1005},
+ISSN = {1424-8220},
+ABSTRACT = {The paper presents a camera comprising 512 × 128 pixels capable of single-photon detection and gating with a maximum frame rate of 156 kfps. The photon capture is performed through a gated single-photon avalanche diode that generates a digital pulse upon photon detection and through a digital one-bit counter. Gray levels are obtained through multiple counting and accumulation, while time-resolved imaging is achieved through a 4-ns gating window controlled with subnanosecond accuracy by a field-programmable gate array. The sensor, which is equipped with microlenses to enhance its effective fill factor, was electro-optically characterized in terms of sensitivity and uniformity. Several examples of capture of fast events are shown to demonstrate the suitability of the approach.},
+DOI = {10.3390/s16071005}
+}
+
+@ARTICLE{Ma03rmsJot,
+  author={Ma, Jiaju and Fossum, Eric R.},
+  journal={IEEE Electron Device Letters}, 
+  title={Quanta Image Sensor Jot With Sub 0.3e- r.m.s. Read Noise and Photon Counting Capability}, 
+  year={2015},
+  volume={36},
+  number={9},
+  pages={926-928},
+  doi={10.1109/LED.2015.2456067}}
+
+@article{Gilbert_2007,
+   title={Quantum Sensor Miniaturization},
+   volume={19},
+   ISSN={1041-1135},
+   url={http://dx.doi.org/10.1109/LPT.2007.906838},
+   DOI={10.1109/lpt.2007.906838},
+   number={22},
+   journal={IEEE Photonics Technology Letters},
+   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
+   author={Gilbert, G. and Hamrick, M. and Weinstein, Y. S. and Pappas, S. P. and Donadio, A.},
+   year={2007},
+   month={Nov},
+   pages={1798–1800}
+}
+
+
+@ARTICLE{FossumSiMulQIS,
+author={Fossum, Eric R.},
+journal={IEEE Journal of the Electron Devices Society},
+title={Modeling the Performance of Single-Bit and Multi-Bit Quanta Image Sensors},
+year={2013},  volume={1},  number={9},  pages={166-174},  doi={10.1109/JEDS.2013.2284054}}
+
+@ARTICLE{qisthreshold,  author={Elgendy, Omar A. and Chan, Stanley H.},  journal={IEEE Transactions on Computational Imaging},   title={Optimal Threshold Design for Quanta Image Sensor},   year={2018},  volume={4},  number={1},  pages={99-111},  doi={10.1109/TCI.2017.2781185}}
+
+%1903.09036.pdf
+@article{Gnanasambandam_2019,
+   title={Megapixel photon-counting color imaging using quanta image sensor},
+   volume={27},
+   ISSN={1094-4087},
+   url={http://dx.doi.org/10.1364/OE.27.017298},
+   DOI={10.1364/oe.27.017298},
+   number={12},
+   journal={Optics Express},
+   publisher={The Optical Society},
+   author={Gnanasambandam, Abhiram and Elgendy, Omar and Ma, Jiaju and Chan, Stanley H.},
+   year={2019},
+   month={Jun},
+   pages={17298}
+}
+
+%07574315.pdf
+@ARTICLE{GongGPU,
+  author={Gong, Qian and Vera, Esteban and Golish, Dathon R. and Feller, Steven D. and Brady, David J. and Gehm, Michael E.},
+  journal={IEEE Transactions on Computational Imaging}, 
+  title={Model-Based Multiscale Gigapixel Image Formation Pipeline on GPU}, 
+  year={2017},
+  volume={3},
+  number={3},
+  pages={493-502},
+  doi={10.1109/TCI.2016.2612942}}
+
+@misc{chi2020dynamic,
+      title={Dynamic Low-light Imaging with Quanta Image Sensors}, 
+      author={Yiheng Chi and Abhiram Gnanasambandam and Vladlen Koltun and Stanley H. Chan},
+      year={2020},
+      eprint={2007.08614},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+
+@misc{elgendy2019color,
+      title={Color Filter Arrays for Quanta Image Sensors}, 
+      author={Omar A. Elgendy and Stanley H. Chan},
+      year={2019},
+      eprint={1903.09823},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+@misc{gnanasambandam2020image,
+      title={Image Classification in the Dark using Quanta Image Sensors}, 
+      author={Abhiram Gnanasambandam and Stanley H. Chan},
+      year={2020},
+      eprint={2006.02026},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+
+@article{Anzagira2015ColorFA,
+  title={Color filter array patterns for small-pixel image sensors with substantial cross talk.},
+  author={L. Anzagira and E. Fossum},
+  journal={Journal of the Optical Society of America. A, Optics, image science, and vision},
+  year={2015},
+  volume={32 1},
+  pages={
+          28-34
+        }
+}
+
+@BOOK{HurterDriffield,
+	AUTHOR = {Ferdinand Hurter and Vero C. Driffield},
+	YEAR = {1890},
+	TITLE = {Photo-chemical investigations and a new method of determination of the sensitiveness of photographic plates},
+	ISBN = {},
+	PUBLISHER = {Society of Chemical Industry},
+	ADDRESS = {London},
+}
+
+@BOOK{AgfaABC,
+	AUTHOR = {Eyke Jessien},
+	YEAR = {1974},
+	TITLE = {ABC der Fotochemie: Fachausdrücke in Wort und Bild},
+	EDITION = {2},
+	ISBN = {},
+	PUBLISHER = {Agfa-Gevaert AG},
+	ADDRESS = {Leverkusen-Bayerwerk},
+}
+
+@Inbook{Krig2014,
+author="Krig, Scott",
+title="Image Capture and Representation",
+bookTitle="Computer Vision Metrics: Survey, Taxonomy, and Analysis",
+year="2014",
+publisher="Apress",
+address="Berkeley, CA",
+pages="1--37",
+abstract="``The changing of bodies into light, and light into bodies, is very conformable to the course of Nature, which seems delighted with transmutations.''",
+isbn="978-1-4302-5930-5",
+doi="10.1007/978-1-4302-5930-5_1",
+url="https://doi.org/10.1007/978-1-4302-5930-5_1"
+}
+
+
+
+@INPROCEEDINGS{GigaOptik,
+  author={Cossairt, Oliver S. and Miau, Daniel and Nayar, Shree K.},
+  booktitle={2011 IEEE International Conference on Computational Photography (ICCP)}, 
+  title={Gigapixel Computational Imaging}, 
+  year={2011},
+  volume={},
+  number={},
+  pages={1-8},
+  doi={10.1109/ICCPHOT.2011.5753115}}
+
+@BOOK{Saleh1991,
+	AUTHOR = {Saleh, Bahaa E. A. AND Teich, Malvin Carl},
+	YEAR = {1991},
+	TITLE = {Fundamentals of Photonics},
+	EDITION = {},
+	ISBN = {978-0-471-83965-1},
+	PUBLISHER = {Wiley},
+	ADDRESS = {New York},
+}
+
+@ARTICLE{Rochas2003,
+  author={Rochas, A. and Gosch, M. and Serov, A. and Besse, P.A. and Popovic, R.S. and Lasser, T. and Rigler, R.},
+  journal={IEEE Photonics Technology Letters}, 
+  title={First fully integrated 2-D array of single-photon detectors in standard CMOS technology}, 
+  year={2003},
+  volume={15},
+  number={7},
+  pages={963-965},
+  doi={10.1109/LPT.2003.813387}}
+
+@INPROCEEDINGS{SPADperformance,  author={Sarbazi, Elham and Safari, Majid and Haas, Harald},  booktitle={2015 4th International Workshop on Optical Wireless Communications (IWOW)},   title={Photon detection characteristics and error performance of SPAD array optical receivers},   year={2015},  volume={},  number={},  pages={132-136},  doi={10.1109/IWOW.2015.7342281}}
+
+@ARTICLE{7422662,  author={Fossum, Eric R.},  journal={IEEE Journal of the Electron Devices Society},   title={Photon Counting Error Rates in Single-Bit and Multi-Bit Quanta Image Sensors},   year={2016},  volume={4},  number={3},  pages={136-143},  doi={10.1109/JEDS.2016.2536722}}
+
+@ARTICLE{7273747,
+  author={Ma, Jiaju and Stasrkey, Dakota and Rao, Arun and Odame, Kofi and Fossum, Eric R.},
+  journal={IEEE Journal of the Electron Devices Society}, 
+  title={Characterization of Quanta Image Sensor Pump-Gate Jots With Deep Sub-Electron Read Noise}, 
+  year={2015},
+  volume={3},
+  number={6},
+  pages={472-480},
+  doi={10.1109/JEDS.2015.2480767}}
+
+
+@INPROCEEDINGS{Charbon2018,  author={Charbon, Edoardo and Bruschini, Claudio and Lee, Myung-Jae},  booktitle={2018 25th IEEE International Conference on Electronics, Circuits and Systems (ICECS)},   title={3D-Stacked CMOS SPAD Image Sensors: Technology and Applications},   year={2018},  volume={},  number={},  pages={1-4},  doi={10.1109/ICECS.2018.8617983}}
+
+@article{Gnanasambandam_2020,
+   title={HDR Imaging With Quanta Image Sensors: Theoretical Limits and Optimal Reconstruction},
+   volume={6},
+   ISSN={2573-0436},
+   url={http://dx.doi.org/10.1109/TCI.2020.3041093},
+   DOI={10.1109/tci.2020.3041093},
+   journal={IEEE Transactions on Computational Imaging},
+   publisher={Institute of Electrical and Electronics Engineers (IEEE)},
+   author={Gnanasambandam, Abhiram and Chan, Stanley H.},
+   year={2020},
+   pages={1571–1585}
+}
+
+
+@Article{rng16,
+AUTHOR = {Amri, Emna and Felk, Yacine and Stucki, Damien and Ma, Jiaju and Fossum, Eric R.},
+TITLE = {Quantum Random Number Generation Using a Quanta Image Sensor},
+JOURNAL = {Sensors},
+VOLUME = {16},
+YEAR = {2016},
+NUMBER = {7},
+ARTICLE-NUMBER = {1002},
+URL = {https://www.mdpi.com/1424-8220/16/7/1002},
+ISSN = {1424-8220},
+ABSTRACT = {A new quantum random number generation method is proposed. The method is based on the randomness of the photon emission process and the single photon counting capability of the Quanta Image Sensor (QIS). It has the potential to generate high-quality random numbers with remarkable data output rate. In this paper, the principle of photon statistics and theory of entropy are discussed. Sample data were collected with QIS jot device, and its randomness quality was analyzed. The randomness assessment method and results are discussed.},
+DOI = {10.3390/s16071002}
+}
+
+@ARTICLE{7006672,
+
+  author={Ma, Jiaju and Fossum, Eric R.},
+
+  journal={IEEE Journal of the Electron Devices Society}, 
+
+  title={A Pump-Gate Jot Device With High Conversion Gain for a Quanta Image Sensor}, 
+
+  year={2015},
+
+  volume={3},
+
+  number={2},
+
+  pages={73-77},
+
+  doi={10.1109/JEDS.2015.2390491}}
+
+@inproceedings{Zheng:12,
+author = {Guoan Zheng and Xiaoze Ou and Changhuei Yang},
+booktitle = {Conference on Lasers and Electro-Optics 2012},
+journal = {Conference on Lasers and Electro-Optics 2012},
+keywords = {Imaging systems; Optical pathology; High throughput optics; Microscopy; Phase imaging; Scanning microscopy; Talbot effect; Three dimensional imaging},
+pages = {CTu3J.1},
+publisher = {Optical Society of America},
+title = {Towards Giga-pixel Microscopy},
+year = {2012},
+url = {http://www.osapublishing.org/abstract.cfm?URI=CLEO_SI-2012-CTu3J.1},
+doi = {10.1364/CLEO_SI.2012.CTu3J.1},
+abstract = {We report a wide field-of-view (FOV) microscopy imaging system that is capable to capture a 10 mm $\ast$ 7.5 mm FOV image with submicron resolution, resulting in 0.54 giga-pixels across the entire image.},
+}
+
+@ARTICLE{7117471,  author={Bérubé, Benoit-Louis and Rhéaume, Vincent-Philippe and Parent, Samuel and Maurais, Luc and Therrien, Audrey Corbeil and Charette, Paul G. and Charlebois, Serge A. and Fontaine, Réjean and Pratte, Jean-François},  journal={IEEE Transactions on Nuclear Science},   title={Implementation Study of Single Photon Avalanche Diodes (SPAD) in $0.8~\mu\hbox{m}$  HV CMOS Technology},   year={2015},  volume={62},  number={3},  pages={710-718},  doi={10.1109/TNS.2015.2424852}}
+
+@article{ConfocalScan,
+title = "Gigapixel confocal imaging using a massively parallel optical probe array with single directional infinite scanning",
+abstract = "Here we demonstrate high-throughput gigapixel confocal imaging using a massively parallel optical probe array with single directional infinite scanning. For implementation of the single directional infinite scan with high lateral resolution, a parallelogram array micro-objective lens module, composed of two wafer-level microlens arrays, is proposed to generate a massively parallel optical probe array for integration into the confocal imaging system, including an objective-side telecentric relay lens with a low-magnification. To test the feasibility of the proposed system with single directional infinite scanning, we designed and constructed a confocal imaging system using a parallelogram array of multi-optical probes with a massively parallel array size of 200 × 140. The constructed system provides a full width-half maximum lateral resolution of 1.55 μm, as measured by the knife-edge detection method, and a field-of-view width of 28.0 mm with a sampling interval of 1 μm/pixel.",
+author = "Ryung Shin and Woojae Choi and Taekyung Kim and Donghyun Kim and Runjia Han and Kyungjin Lee and Nahyun Won and Shinill Kang",
+note = "Funding Information: This work was supported by National Research Foundation of Korea (NRF) Grant funded by the Korean Government (MSIT) (No. 2015R1A5A1037668). Publisher Copyright: {\textcopyright} 2020, The Author(s).",
+year = "2020",
+month = dec,
+day = "1",
+doi = "10.1038/s41598-020-64602-3",
+language = "English",
+volume = "10",
+journal = "Scientific Reports",
+issn = "2045-2322",
+publisher = "Nature Publishing Group",
+number = "1",
+
+}
+
+%09156646.pdf
+@misc{wang2020panda,
+      title={PANDA: A Gigapixel-level Human-centric Video Dataset}, 
+      author={Xueyang Wang and Xiya Zhang and Yinheng Zhu and Yuchen Guo and Xiaoyun Yuan and Liuyu Xiang and Zerun Wang and Guiguang Ding and David J Brady and Qionghai Dai and Lu Fang},
+      year={2020},
+      eprint={2003.04852},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+@ARTICLE {tileScan,
+author = {Moshe Ben-Ezra},
+journal = {IEEE Computer Graphics and Applications},
+title = {A Digital Gigapixel Large-Format Tile-Scan Camera},
+year = {2011},
+volume = {31},
+number = {01},
+issn = {1558-1756},
+pages = {49-61},
+keywords = {lenses;cameras;pixel;image resolution;microoptics;image edge detection;virtual reality;museums},
+doi = {10.1109/MCG.2011.1},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {jan}
+}
+
+@ARTICLE {6866849,
+author = {C. Papadopoulos and K. Petkov and A. E. Kaufman and K. Mueller},
+journal = {IEEE Computer Graphics and Applications},
+title = {The Reality Deck--an Immersive Gigapixel Display},
+year = {2015},
+volume = {35},
+number = {01},
+issn = {1558-1756},
+pages = {33-45},
+keywords = {data visualization;biomedical monitoring;computer graphics;three-dimensional displays},
+doi = {10.1109/MCG.2014.80},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {jan}
+}
+
+
+@misc{physics_world_2018, title={Gigapixel camera pushes resolution limit}, author={Jon Cartwright}, url={https://physicsworld.com/a/gigapixel-camera-pushes-resolution-limit}, journal={Physics World}, year={2018}, month={Jan}} 
+ 
+@misc{aware2, title={AWARE2 Multiscale Gigapixel Camera},
+author={Duke Information Spaces Project}, url={https://disp.duke.edu/research/aware2-multiscale-gigapixel-camera}, journal={AWARE2 Multiscale Gigapixel Camera}} 
+
+@misc{lawton_artaius_2021, title={The 12 highest resolution cameras you can buy today: ultimate pro cameras}, url={https://www.digitalcameraworld.com/buying-guides/the-10-highest-resolution-cameras-you-can-buy-today}, journal={digitalcameraworld}, publisher={Digital Camera World}, author={Lawton, Rod and Artaius, James}, year={2021}, month={Jul}} 
+ 
+@INPROCEEDINGS{2011amos.confE..72P,
+       author = {{Perpeet}, D. Wassenberg, J.},
+        title = "{Engineering the Ideal Gigapixel Image Viewer}",
+    booktitle = {Advanced Maui Optical and Space Surveillance Technologies Conference},
+         year = 2011,
+       editor = {{Ryan}, S.},
+        month = sep,
+          eid = {E72},
+        pages = {E72},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2011amos.confE..72P},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+
+
+@Article{s16111961,
+AUTHOR = {Chan, Stanley H. and Elgendy, Omar A. and Wang, Xiran},
+TITLE = {Images from Bits: Non-Iterative Image Reconstruction for Quanta Image Sensors},
+JOURNAL = {Sensors},
+VOLUME = {16},
+YEAR = {2016},
+NUMBER = {11},
+ARTICLE-NUMBER = {1961},
+URL = {https://www.mdpi.com/1424-8220/16/11/1961},
+ISSN = {1424-8220},
+ABSTRACT = {A quanta image sensor (QIS) is a class of single-photon imaging devices that measure light intensity using oversampled binary observations. Because of the stochastic nature of the photon arrivals, data acquired by QIS is a massive stream of random binary bits. The goal of image reconstruction is to recover the underlying image from these bits. In this paper, we present a non-iterative image reconstruction algorithm for QIS. Unlike existing reconstruction methods that formulate the problem from an optimization perspective, the new algorithm directly recovers the images through a pair of nonlinear transformations and an off-the-shelf image denoising algorithm. By skipping the usual optimization procedure, we achieve orders of magnitude improvement in speed and even better image reconstruction quality. We validate the new algorithm on synthetic datasets, as well as real videos collected by one-bit single-photon avalanche diode (SPAD) cameras.},
+DOI = {10.3390/s16111961}
+}
+
+@BOOK{Hunt2005,
+	AUTHOR = {Hunt, R. W. G.},
+	YEAR = {2005},
+	TITLE = {The Reproduction of Colour},
+	EDITION = {},
+	ISBN = {978-0-470-02426-3},
+	PUBLISHER = {John Wiley & Sons},
+	ADDRESS = {New York},
+}
+
+
+@online{GigaPanWWW,
+author ={GigaPan Systems | Panoramic Photography Equipment and Software Company},
+year = {2016},
+title ={What is a Gigapan?},
+url ={http://gigapan.com/cms/about-us},
+month ={jul},
+lastaccessed ={July 1, 2021},
+}
+
+@misc{GigaPanVimeo,
+author ={Jeff Cremer},
+year = {2012},
+title ={Machu Picchu 16 Gigapixels},
+url ={https://vimeo.com/53364475},
+month ={nov},
+lastaccessed ={July 1, 2021},
+}

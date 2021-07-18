@@ -1,0 +1,114 @@
+\subsection{The Pixels as Jots}
+
+The avalanche-mode operation in SPAD-based photodetectors limits the pixel pitch and the manufacturing yield and delivers highly undesirable amounts of dark current, which can be somewhat reduced through cooling. In fact, the abstinence from the avalanche photodiode technology is stated to be one of the design criteria in photon-counting applications.
+Quanta imaging sensor (or QIS for short), a different implementation of the binary image sensor, attempts to overcome such limitations\cite{Ma:17, Ma03rmsJot}.
+The principal advantages of CMOS arrays (low-voltage operation, low power consumption, ease of integration of on-chip operation control, the possibility of random access to the image data, etc., \cite{Holst2011}) must be retained. %S.105
+
+In QIS, the photodetectors are intentionally made small as to be capable of storing charges of several electrons. 
+Placed together in a structure, these become \textit{jot devices}, with "jot" denoting the ``smallest thing'', a word of Greek origin \cite{FossumSiMulQIS}.
+
+In some of the available research (\cite{s16111961}), jots are referred to as subpixels, or, partitions of conventional CMOS memory bit-cells; other sources (\cite{fossum2016quanta}) may use the term ``\textit{SDL pixels}'', referring to the pitch values within sub-diffraction limit (200-500$n$m).
+
+The jot photoelements have a \textit{small full-well capacity} (FWC, or storage capacity density, often provided in photoelectrons per cm$^2$), which ranges from one to around 100 or 200 carriers -- compared with the state-of-the-art conventional imaging sensors where the full well is first reached at ca. 4000$e^{-}$~\cite{Gnanasambandam_2020}, the values are low. Subsequent circuitry discriminates the output to one of the binary states \cite{FossumSiMulQIS}, based on the pre-defined, semi-arbitrarily set threshold $q$. 
+
+Instead of converting the number of photons impinging on the sensor surface to voltage, either 1 or 0 are transferred and quantized. Precision of quantization is not of essence. The thresholds are set lower due to the relatively small FWC, and the binary response is triggered quickly. Thus, unlike conventional CIS pixels (described as "buckets" accumulating and integrating [larger] charges of multiple photoelectrons), jots require lesser integration times and can be readout at rates as high as 1000 frames, or fields, per second. 
+
+\cite{MaJotDevices} envision QIS to have structures consisting of 0.1...10.0 Gjots; due to the fast readout speeds, dimensions of this order must lead to data rates of 0.1...10 Tb/s.
+
+Research regarding the quanta imaging sensor technology is currently in progress. A prototype of camera featuring QIS has already been produced, albeit with a lesser spatial resolution and pixel pitch than sought-after. Representing a crucial paradigm shift, this imaging technology has full potential to stand in as the third generation of digital sensors, replacing CMOS. The benefits, advantages, and the detailed methodology behind QIS will be discussed in the remainder of this paper.
+
+\section{Quanta Imaging Sensor}
+\subsubsection{Jot Data Structure}
+%Frames readout off the sensor are accounted for during the image formation, allowing for estimation of the local light intensities as a function of time.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/sensors/binarysensor.png}
+  \caption{Binary sensor model, via \cite{Feng_Yang_2012}.}
+  \Description{Photon-counting process in an oversampled binary sensor.}
+\end{figure}
+
+The output of the simple QIS design is binary in nature. Combined output of the QIS jots is a series of bit planes, observed over time. Since both spatial and temporal sampling take place, the output can be conceptualized as a cube, as shown in Figure \ref{fig:jotcube}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{imgs/qis/jotdatacube.png}
+  \caption{Jot data cube, via \cite{fossum2016quanta}}
+  \label{fig:jotcube}
+  \Description{The output of a quanta image sensor, divided into binary values corresponsing to the spatial $x$-$y$-coordinates and the temporal dimension $t$.}
+\end{figure}
+
+Unlike CIS arrays which produce images of fixed sizes, quanta imaging sensor allows the output pixel image size to be programmable and dynamically adjustable~\cite{FossumSiMulQIS}; the image reconstruction mostly occurs post-acquisition, and the bit plane can be divided into smaller jot cubicles of arbitrary sizes which should then form a single pixel in the conventional sense from temporal and spatial data.
+
+It is understood that the forming of the image pixels does not require uniformly sized jot cubicles; for separate pixels, these can have different dimensions in $x$, $y$, and $t$. It follows that selected cubicles of the adjacent pixels may overlap, aiding formation of multiple CIS pixels at once~\cite{fossum2016quanta}.
+
+\subsection{Distinctions}
+
+The similarity of the QIS response to the sensitivity of the photographic film emulsion has been established in the previous sections; in both cases, the shape of the characteristic curve is determined by the photon arrival statictics. 
+
+In film, around 3-4 carriers were needed to elicit the chemical reaction. Since the binary value is obtained through comparisons against a certain threshold, the choice of threshold can influence the final response. Figure \ref{fig:qiskt} shows the response curves plotted for the number of carriers $k_{T}$ needed for the single-bit pixel output of ``1'' ($k_{T}=1,2,3,4,20$). It is evident that the linearity of the QIS response curve changes with the larger thresholds; similarly, the overexposure latitude is shifted towards larger exposures. Hence, the single-bit jot devices can be applicable under multiple varying lighting conditions, enabling low-light and high dynamic range imaging applications, where the acqusition using multiple threshold values would provide different values for linearity.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/qis/multicarrier.png}
+  \caption{Single-bit QIS response curves in dependence of the amount of carriers, via \cite{FossumSiMulQIS}}
+  \label{fig:qiskt}
+  \Description{Response curves of QIS depending on the threshold. For larger values, the slopes are narrower, and the overexposure latitudes are reached upon stronger illumination, albeit more quickly.}
+\end{figure}
+
+For this reason, it is convenient to distinguish between the single-bit jot devices with full-well capacitances in the classical sense, of only one electron (\textit{single-carrier}), and multiple electrons (\textit{multi-carrier}) which can be dynamically adjusted in their responses based on the threshold.
+
+\subsection{Hardware Design}
+
+To facilitate the transition to the QIS as the future dominant sensor technology in the future, strong compatibility with a CIS fabrication line must persist.
+
+CMOS sensor serves as a suitable basis for quanta imaging due to its low voltage specifications, high quantum efficiency, high spatial resolution, and more. \cite{Ma:17}. 
+However, due to the source-follower output voltage, the read noise is too high to enable photon detection. Current state-of-the-art CIS demonstrate read noise in the ranges of 1...2$e^{-}$ r.m.s. ~\cite{7273747}. Due to the binary nature of the signal, such amount of noise has grave consequences for the single-bit QIS, resulting in high possibilities of false misquantization. At low light levels, desired read noise in single-bit QIS should amount to 0.3$e^{-}$ r.m.s. at best, delivering error-free estimation with 0.15$e^{-}$ r.m.s. under especially sparse exposures (0.01<H<1). For such low bit error rates, conversion gain of at least ca. 1$m$V/$e^{-}$ is needed, which is five times higher than the values demonstrated in the state-of-the-art CIS devices~\cite{MaJotDevices}.
+For this reason, current CIS technologies must be modified in order to enable photon-counting.
+
+%Instead of using avalanche gain to detect single photoelectrons, the gain comes from using a very small sense node capacitance yielding CG in the range of 500uV/e-. Using intrapixel charge transfer, a single electron transferred to that capacitance can produce a signal that is well above the noise floor (e.g. 0.2e- rms noise floor) and thus give a low error rate for detection of single photoelectrons. The detection process is slower than for SPADs, but sub-microsecond timing is achievable. Further, avoiding the high electric fields of SPADs enables smaller pixels or jots, improved manufacturability, and thus lower cost per pixel and smaller optics. Power dissipation is also considerably smaller. In late 2017, Dartmouth reported a 1Mpixel QIS device implemented in a nearly standard CMOS BSI stacked process with 1.1um pixel pitch, operating at 1000fps and dissipating about 20mW total power. The 1Mpixel QIS was demonstrated more than two years earlier than the 1Mpixel SPAD array and with much less development time and with much smaller pixels. About 73 CMOS QIS pixels can fit into the area of one SPAD pixel. This is the strength of working in nearly standard CMOS image sensor processes. The applications of QIS are currently being explored but include low-light imaging for security, defense and science.
+%\cite{9059308}
+
+%Single jot is described having storage well of 1...200$e^{-}$. 
+During the charge-to-voltage conversion, the signal transfer is corrupted by noise  due to the voltage fluctuations and the parasitic capacitances in the circuitry, which reduce the transfer efficiency. %may end up corrupted by noise 
+Higher conversion gain ensures that the estimations are accurate, and the transferred electrons are capable of producing signal above the noise floor. This could be achieved by increasing the voltage, however, higher operating voltage would render the sensor incompatible with most baseline CMOS processes.\cite{Ma:17} Otherwise, one can attempt to minimize the read noise, which is caused by the capacitance of the floating diffusion. In available works, FD is minimized via specialized jot structures, where the doping profiles of the pixels are modified via implantations.
+Jot candidates based on their doping properties are covered in detail \cite{Masoodian16, Ma:17}. On average, the doping profiles of the jots have lead to the reduction of the noise to ca. 0.21$e^{-}$ r.m.s. with the conversion gain nearing 350$\mu$V/$e^{-}$ with 15\% variation~\cite{Ma:17}.
+
+Most of the publications referenced in this work explore prototypes for jot devices which were fabricated in conformance with the 45/65nm 3D stacked CMOS process with backside-illumination (BSI), which guarantees high fill factor and quantum efficiency~\cite{Ma03rmsJot}.
+
+Figure \ref{fig:qischip} demonstrates the architecture of existing 1Mjot clusters with vertical integration. The jot device is vertically separated from the readout circuitry, which reduces the total area and allows faster readout. Presented array can be implemented with analog and digital readout circuitry; Such clusters can be arranged in parallel, thus forming a chip of significantly larger dimensions without any significant delays in speed. In this particular jot device, analog clusters were integrated together with the digital clusters.
+
+%Above all, in order to achieve the theorized performance, the jots must achieve higher conversion gain, and the appropriate architecture for the binary analog-to-digital-converter must be found to ensure that the resulting read noise is in the deep sub-electron range.
+
+%Quanta imaging sensor inherits CIS advantages in terms of pixel size, spatial resolution, dark current, quantum efficiency (QE), readout speed, and power dissipation. Beyond CIS and existing photon-counting technologies, the QIS aims to realize accurate photon counting without avalanche gain or cooling, while maintaining low dark current and manufacturing cost.\cite{Ma:17}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/qis/mjot-wafer.png}
+  \caption{Simplified architecture of the 1 Mjot stacking QIS chip (left) and one digital cluster (right), via \cite{Ma:17}}
+  \label{fig:qischip}
+  \Description{The wafer containing the photodetectors is positioned vertically above the circuitry. The jots are united in clusters, each cluster has a designated circuitry unit for readout.}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{imgs/qis/20Mjot.png}
+  \caption{QIS test chip featuring 20 1Mjot arrays (left), via \cite{s19245459}.}
+  \label{fig:20mjots}
+  \Description{Yellow sensor chip realizing 20 Mjot clusters. The clusters are placed in a grid on the sensor plane.}
+\end{figure}
+
+Within a single-bit QIS, ADC acts as a simple comparator with an exposure-appropriate threshold $q$. Since the response is binary, the bit depth of only 1 is required for quantization.
+
+\subsection{Multi-Bit QIS}
+
+The field readout rate of the sensor can be traded off for the increased bit depth of the ADC, thus allowing to count more photoelectrons per each readout cycle. Such implementation of the sensor, the multi-bit QIS, can be seen as the middle ground between the conventional CIS and the single-bit photon-counting sensor~\cite{ADCmultibit}. The carrier numbers, which were previously reduced to single-bit values, can now be mapped to their respective quantities in a certain range. Upon saturation, the maximum number of the converter is reported instead~\cite{FossumSiMulQIS}.
+
+Through lowered framerates and increased electron resolution, the output data transfer rate can be lowered. The increase in complexity of the ADC is negligible in comparison with the lowered complexity of the calculations; since the represented number of carriers is defined to be in the range of 1...200$e^{-}$, the resolution of the ADC does not need to be overly high, presenting significant improvements with the bit depth of $n = 6$. Reduction of the framerate for a multi-bit QIS occurs by the factor $2^n -1$; assuming the framerate of 1000 fps for single-bit QIS, the framerate of a multi-bit QIS will amount to $\frac{1000 \textup{fps}}{2^{n}-1}$, ensuring reduction by the factor of 63 in case with the 6b ADC.
+
+Another advantage provided by the bit depth selection is the ability to adjust linearity and compression between the input photon flux and the output signal.
+
+The prototype in Figure \ref{fig:20mjots} features 20 1Mjot arrays, allowing easy and flexible scaling in overall resolution due to the cluster-parallel architecture mentioned earlier. However, with each integrated arrays, the power dissipation is multiplied accordingly. The choice of ADC architecture for multi-bit QIS in terms of power consumption has been evaluated in \cite{ADCmultibit}, where the successive approximation register ADCs were deemed too be the least power-consuming option in relation to the occupied area. 
+
+
+\input{chapters/color}

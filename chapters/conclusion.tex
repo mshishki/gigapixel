@@ -1,0 +1,19 @@
+%\subsection{Further topics}
+%\subsection{Viewing and editing}
+%The data size of the large images poses a significant problem when it comes to their reproduction.
+%For one, the rendition of the images in full-scale is a difficult task, and the resulting bandwidth exceeds the capacities of the state-of-the-art displays despite measures like parallel rendering and the composite GPU architectures. The pre-processing techniques which aim to visualize the images based on the acuity and the human perception are connected with the memory management issues.
+%Furthermore, most of the currently available displays are not optimized for the pixel density, thus being unable to provide us with the acuity-driven visualizations. \cite{6866849} 
+%\subsection{The future of the QIS} %Moving towards the consumer market / public domain
+
+Commercial realization still needs to overcome several technical challenges to fulfill demands listed in previous chapters. The pixel pitch is far from the ideally theorised pitch of 200...500 $n$m range, although it should be said that for existing dimensions, some of the requirements (e.g. low read noise) have already been fulfilled. Similarly, existing chips contain multiple 1Mjot chips, which, while combined together, will increase the resolution, but  also result in higher power dissipation.
+
+The artistic use of the cameras may suffer some limitations regarding integration of further subsystems: for instance, the use of the synchronized flash devices would mean that nearly each pixel would simultaneously detect a photon, rendering the estimation impossible. Similar effect could theoretically be observed in auxilliary optical elements like polarizing filters, which would per definition cut the amount of incident light in half. Additionally, the gigajot device may not be ripe for the mainstream market just yet due to the low support of conventional color imaging. However, the problem of color imaging capacities in QIS has been adressed in detail in the recent years, concentrating on denoising the data in low-light, or photon-starved, regime\cite{elgendy2019color, gnanasambandam2020image} -- with further progress made, one may be able to accomodate both sparse and overly present illumination, especially via multi-bit QIS. 
+
+Founded under the aegis of the IEEE community, the International Roadmap for Devices and Systems™ (\url{https://irds.ieee.org}) publishes annual reports on recent advancements and trends in the manufacturing of semiconductor devices, computing systems, and the electronic industry in general. 
+
+While the photon-counting devices have not been covered in 2020, the ´´Beyond CMOS'' roadmap describes many emerging FET technologies that could minimize their power consumption, and states the need for the circuits that follow the probabilistic/stochastic computational paradigm. Likewise, AI implementations in the integrated circuits are an active area of research~\cite{hao2021recent} and might alleviate the computational expenses of quanta image post-processing altogether. \cite{qisthreshold} denote the need for a threshold adjustment module and refer to per-pixel FPGAs, a project currently pursued by MIT Lincoln Lab.
+
+In terms of hardware, main challenges of the [photonic] quanta imaging remain to be design of internal high-speed and low-power addressing and readout circuitry~\cite{Masoodian16}; for monitoring the current progress, we urge the readers to familiarize themselves with the roadmaps. 
+
+Many proposals for the jot device implementation and the conformance with the baseline CIS process should signify high probability of establishment of gigavision acquisition process in the future -- at least in the scientific applications. As the feasibility of the QIS has been demonstrated in working prototypes, it can indeed become a third generation digital sensor with time, as previously envisioned.
+%

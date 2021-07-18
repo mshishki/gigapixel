@@ -1,0 +1,31 @@
+%\section{Binary sensor imaging}
+\input{chapters/analog}
+\input{chapters/sensors/spad}
+\input{chapters/sensors/qis}
+
+\subsection{Compared Performance}
+
+Table \ref{tab:comp} shows some of the most significant operating parameters for the two photon-counting sensor implementations. We have collected these specifications based on the state-of-the-art implementations of the devices reported in the references section, taking the values from the most recently published sources in case of ambiguities.
+
+It is evident that while SPAD-based arrays have higher dark current through thermally-induced avalanche gain, their read noise is still rather low, and the framerate is higher than the one in QIS by several orders of magnitude. The reasons for this behavior, i.e. the amount of circuitry required to implement quenching, were mentioned in detail in previous sections. The read noise in QIS is nearing the ideal, relatively error-free value of 0.15$e^{-}$ r.m.s., while the dark current is completely negligible.
+
+\begin{table}
+  \caption{Comparison of QIS and SPADs}
+  \label{tab:comp}
+  \begin{tabular}{l|cc}
+    \toprule
+    Parameters & QIS & SPAD\\
+    \midrule
+    Pixel pitch & 1.1$\mu$m & 5-10$\mu$m\\
+    Read noise [RT] & 0.21$e^{-}$ r.m.s. & <0.15$e^{-}$ r.m.s.\\
+    Dark current [RT] & 0.16$e^{-}$ r.m.s. & >10$e^{-}$ r.m.s.\\
+    Framerate & 1040 fps & 97 000 fps \\
+    Quantum efficiency & 70-80\%  & 30-50\% \\
+    Fill factor & >90\% & <70\% \\
+    Full well capacity & 1-200$e^{-}$ & N/A \\
+    Operating voltage & 2.5/3.3V & 15-25V\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The contrast in approaches is noticeable in almost every other specification. Compared to QIS, SPADs need high electrical voltage to accelerate the photoelectrons, while providing lesser quantum efficiency. Such differences provide a clear distinction between the applications of both photon-counting sensors: SPAD-based imaging is significantly more functional in applications that value acquisition rate above all and need better temporal resolution, e.g. Time-of-Flight imaging, while QIS is better suitable for applications that prioritize accuracy and low-light sensitivity. Low-light imaging applications of QIS may include astronomy, surveillance, medical examinations, and many others. With sufficiently large oversampling, the single-bit QIS can have substantially higher dynamic ranges, being able to acquire scenes containing both bright and dark regions~\cite{Feng_Yang_2012} and benefitting from the non-linear binary curve. According to \cite{9059308}, about 73 CMOS QIS pixels can fit into the area of one SPAD pixel, rendering the technology especially desirable in microbiology purposes.
